@@ -4,6 +4,7 @@ import Banner from "../Banner";
 import "./HomeScreen.css";
 import Row from "../Row";
 import requests from "../Requests";
+import LoginScreen from "./LoginScreen";
 
 function HomeScreen() {
   return (
@@ -13,7 +14,7 @@ function HomeScreen() {
 
       {/* Banner */}
       <Banner />
-
+      <LoginScreen />
       <Row
         title="NETFLIX ORIGINALS"
         fetchUrl={requests.fetchNetflixOriginals}
@@ -26,17 +27,6 @@ function HomeScreen() {
       <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
       <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
       <Row title="Documentaries" fetchUrl={requests.fetchDocumentariesMovies} />
-
-      <div className="home__overlay" />
-      <div className="home__body">
-        <h1>Unlimited films, TV programs and more.</h1>
-        <div className="home__input">
-          <form>
-            <input type="email" placeholder="Email Address" />
-            <button className="home__getStarted"> GET STARTED</button>
-          </form>
-        </div>
-      </div>
     </div>
   );
 }
