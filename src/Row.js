@@ -16,26 +16,24 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
     fetchData();
   }, [fetchUrl]);
 
-  //  console.log(movies);
-  //alert("in dev");
-
   return (
     <div className="row">
       <h2>{title}</h2>
 
       <div className="row__posters">
-        {movies.map((movie) => {
-          return (
-            <img
-              className={`row__poster ${isLargeRow && "row__posterLarge"}`}
-              key={movie.id}
-              src={`${base_url}${
-                isLargeRow ? movie.poster_path : movie.backdrop_path
-              }`}
-              alt=""
-            />
-          );
-        })}
+        {movies.length > 0 &&
+          movies.map((movie) => {
+            return (
+              <img
+                className={`row__poster ${isLargeRow && "row__posterLarge"}`}
+                key={movie.id}
+                src={`${base_url}${
+                  isLargeRow ? movie.poster_path : movie.backdrop_path
+                }`}
+                alt=""
+              />
+            );
+          })}
       </div>
     </div>
   );
