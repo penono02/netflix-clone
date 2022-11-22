@@ -4,7 +4,7 @@ import Banner from "../Banner";
 import "./HomeScreen.css";
 import Row from "../Row";
 import requests from "../Requests";
-import LoginScreen from "./LoginScreen";
+//import LoginScreen from "./LoginScreen";
 
 function HomeScreen() {
   return (
@@ -14,7 +14,7 @@ function HomeScreen() {
 
       {/* Banner */}
       <Banner />
-      <LoginScreen />
+
       <Row
         title="NETFLIX ORIGINALS"
         fetchUrl={requests.fetchNetflixOriginals}

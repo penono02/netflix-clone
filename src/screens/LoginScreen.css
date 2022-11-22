@@ -1,6 +1,10 @@
 .loginScreen {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 12;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .loginScreen__gradient {
   width: 100%;
